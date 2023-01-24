@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-search {
+  top: 0.375rem;
+  left: 1.75rem;
+}
+
+.my-clear-search {
+  top: 0.375rem;
+  right: 0.75rem;
+}
