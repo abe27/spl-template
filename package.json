@@ -17,6 +17,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -30,6 +33,7 @@
     "chart.js": "^4.2.0",
     "daisyui": "^2.47.0",
     "faker": "^5.5.3",
+    "framer-motion": "^8.5.2",
     "postcss": "^8.4.21",
     "postcss-import": "^15.1.0",
     "react-chartjs-2": "^5.2.0",
