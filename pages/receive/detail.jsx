@@ -1,6 +1,9 @@
-import { MainLayOut, ReceiveTable } from "@/components";
+import { useRouter } from "next/router";
+import { MainLayOut, ReceiveDetailTable } from "@/components";
 
 const ReceiveDetailPage = () => {
+  const router = useRouter();
+  const { rec_id } = router.query;
   return (
     <>
       <MainLayOut
@@ -9,7 +12,8 @@ const ReceiveDetailPage = () => {
         description="จัดการข้อมูลรายการรับสินค้า"
       >
         <>
-          <ReceiveTable />
+        {rec_id}
+          <ReceiveDetailTable />
         </>
       </MainLayOut>
     </>

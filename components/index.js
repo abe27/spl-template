@@ -8,6 +8,7 @@ import InputSearch from "./elements/InputSearch";
 import MainLayOut from "./MainLayOut";
 
 import ReceiveTable from "./receive/ReceiveTable";
+import ReceiveDetailTable from "./receive/ReceiveDetailTable";
 
 export {
   NavBar,
@@ -18,5 +19,6 @@ export {
   LineChart,
   UserTopMenu,
   MainLayOut,
-  ReceiveTable
+  ReceiveTable,
+  ReceiveDetailTable
 };
