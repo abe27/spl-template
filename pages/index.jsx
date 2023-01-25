@@ -2,6 +2,7 @@ import {
   BarChart,
   LineChart,
   MainLayOut,
+  ReceiveTable,
   State,
 } from "@/components";
 
@@ -22,6 +23,7 @@ const HomePage = () => {
       </section>
       <section className="divider" />
       <section className="mt-4">
+        <ReceiveTable />
       </section>
     </MainLayOut>
   );
