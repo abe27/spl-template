@@ -7,7 +7,7 @@ import {
   LineElement, PointElement, Title,
   Tooltip
 } from "chart.js";
-import faker from "faker";
+import { faker } from '@faker-js/faker';
 import { Line } from "react-chartjs-2";
 
 ChartJS.register(

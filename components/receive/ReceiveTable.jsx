@@ -7,8 +7,10 @@ import {
 import { InputSearch } from "..";
 import { faker } from '@faker-js/faker';
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const ReceiveTable = () => {
+  const router = useRouter()
   const [reload, setReload] = useState(false);
   const [data, setData] = useState([]);
 
@@ -17,7 +19,7 @@ const ReceiveTable = () => {
     let doc = [];
     const whs = ["COM", "DOM", "NESC", "ICAM", "SUPP.", "WIRE"];
     for (let i = 0; i < 20; i++) {
-      let fac = whs[faker.random.number({ min: 0, max: whs.length - 1 })];
+      let fac = whs[faker.datatype.number({ min: 0, max: whs.length - 1 })];
       let pref = "TI2";
       let txtClass = "text-blue-600";
       if (fac === "DOM") {
@@ -42,11 +44,11 @@ const ReceiveTable = () => {
         "0" +
         (d.getMonth() + 1)
       ).slice(-2)}${("0" + d.getDate()).slice(-2)}${(
-        "0" + faker.random.number({ min: 1, max: 12 })
+        "0" + faker.datatype.number({ min: 1, max: 12 })
       ).slice(-2)}`;
-      let qty = faker.random.number({ min: 1000, max: 100000 });
-      let ctn = faker.random.number({ min: 1, max: 1000 });
-      let rec = faker.random.number({ min: 0, max: 1000 });
+      let qty = faker.datatype.number({ min: 1000, max: 100000 });
+      let ctn = faker.datatype.number({ min: 1, max: 1000 });
+      let rec = faker.datatype.number({ min: 0, max: 1000 });
       let dff = rec - ctn;
       doc.push({
         id: i + 1,
@@ -192,7 +194,7 @@ const ReceiveTable = () => {
                     scope="col"
                     className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
                   >
-                    <button type="button" className="btn btn-ghost">
+                    <button type="button" className="btn btn-ghost" onClick={()=>router.push("/receive/add")}>
                       <PlusCircleIcon className="w-5 h-5" />
                     </button>
                   </th>

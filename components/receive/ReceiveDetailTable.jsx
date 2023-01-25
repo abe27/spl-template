@@ -17,14 +17,14 @@ const ReceiveDetailTable = () => {
     let doc = [];
     const whs = ["COM", "DOM", "NESC", "ICAM", "SUPP.", "WIRE"];
     for (let i = 0; i < 20; i++) {
-      let qty = faker.random.random.number({ min: 1000, max: 100000 });
-      let ctn = faker.random.number({ min: 1, max: 1000 });
-      let rec = faker.random.number({ min: 0, max: 1000 });
+      let qty = parseInt(faker.random.numeric(5));
+      let ctn = parseInt(faker.random.numeric(3));
+      let rec = ctn - parseInt(faker.random.numeric(1));
       let dff = rec - ctn;
       doc.push({
         id: i + 1,
         part_no: faker.phone.imei(),
-        part_name: faker.name.firstName(),
+        part_name: faker.vehicle.bicycle(),
         qty: qty,
         ctn: ctn,
         rec: rec,
